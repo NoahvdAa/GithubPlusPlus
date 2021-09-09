@@ -6,6 +6,7 @@
 // @author       NoahvdAa
 // @match        https://github.com/*
 // @icon         https://www.google.com/s2/favicons?domain=github.com
+// @downloadURL  https://github.com/NoahvdAa/GithubPlusPlus/raw/master/ClickableContributorBadge/ClickableContributorBadge.user.js
 // @grant        none
 // ==/UserScript==
 
