@@ -9,18 +9,18 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(function () {
+	'use strict';
 
-    Array.from(document.querySelectorAll('.timeline-comment-label')).forEach(label => {
-        if(label.innerText !== 'Contributor') return;
-        label.style.cursor = 'pointer';
-        label.onclick = function() {
-            const repoBaseURL = document.querySelector('[data-pjax="#js-repo-pjax-container"]').href;
-            const contributor = label.parentElement.parentElement.querySelector('.author').innerText;
+	Array.from(document.querySelectorAll('.timeline-comment-label')).forEach(label => {
+		if (label.innerText !== 'Contributor') return;
+		label.style.cursor = 'pointer';
+		label.onclick = function () {
+			const repoBaseURL = document.querySelector('[data-pjax="#js-repo-pjax-container"]').href;
+			const contributor = label.parentElement.parentElement.querySelector('.author').innerText;
 
-            console.log(label.parentElement.parentElement);
-            window.location = `${repoBaseURL}/commits?author=${contributor}`;
-        };
-    });
+			console.log(label.parentElement.parentElement);
+			window.location = `${repoBaseURL}/commits?author=${contributor}`;
+		};
+	});
 })();
